@@ -1,0 +1,7 @@
+{
+  "name": "brainfuck",
+  "version": "1.0.0",
+  "repository": "https://github.com/balozae/brainfuck.git",
+  "author": "balozae <43301216+balozae@users.noreply.github.com>",
+  "license": "MIT"
+}
