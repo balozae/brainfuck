@@ -1,7 +1,8 @@
 const map = require('lodash/map');
-const range = require('lodash/range');
 const intersection = require('lodash/intersection');
 const flatten = require('lodash/flatten');
+
+const range = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // может решать только простые
 
@@ -89,14 +90,14 @@ function toString(puzzle) {
 function getPossibleColumn(puzzle, y) {
   const columnValues = map(puzzle, y);
 
-  return range(1, 10)
+  return range
     .filter(n => !columnValues.includes(n));
 }
 
 function getPossibleRow(puzzle, x) {
   const rowValues = puzzle[x];
 
-  return range(1, 10)
+  return range
     .filter(n => !rowValues.includes(n));
 }
 
@@ -117,7 +118,7 @@ function getPossibleSection(puzzle, section) {
     }
   }
 
-  return range(1, 10).filter(n => !numbers.includes(n));
+  return range.filter(n => !numbers.includes(n));
 }
 
 function isValid(puzzle) {
