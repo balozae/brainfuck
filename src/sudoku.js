@@ -100,7 +100,7 @@ function getPossibleRow(puzzle, x) {
     .filter(n => !rowValues.includes(n));
 }
 
-function getSection(x, y) {
+function getSquare(x, y) {
   for (let section of SECTION_LIST) {
     if (y >= section.min[0] && y <= section.max[0] && x >= section.min[1] && x <= section.max[1]) {
       return section;
@@ -137,7 +137,7 @@ function main(puzzle) {
           continue dance;
         }
 
-        const section = getSection(x, y);
+        const section = getSquare(x, y);
 
         const rowValues = getPossibleRow(result, y);
         const colValues = getPossibleColumn(result, x);
