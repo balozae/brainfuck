@@ -42,28 +42,28 @@ const puzzle = [
 
 const range = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-function getSquare(puzzle, rowIndex, columnIndex) {
+function getSquare(puzzle, rowNum, colNum) {
   const res = [];
 
   // получение начальных значений квадрата
-  const startRowIndex = rowIndex - (rowIndex % 3);
-  const startColumnIndex = columnIndex - (columnIndex % 3);
+  const startRowNum = rowNum - (rowNum % 3);
+  const startColumnNum = colNum - (colNum % 3);
 
   for (let i = 0; i < 3; i += 1) {
     for (let j = 0; j < 3; j += 1) {
-      res.push(puzzle[startRowIndex + i][startColumnIndex + j]);
+      res.push(puzzle[startRowNum + i][startColumnNum + j]);
     }
   }
 
   return res;
 }
 
-function getRow(puzzle, rowIndex) {
-  return puzzle[rowIndex];
+function getRow(puzzle, rowNum) {
+  return puzzle[rowNum];
 }
 
-function getColumn(puzzle, columnIndex) {
-  return puzzle.map(row => row[columnIndex]);
+function getColumn(puzzle, colNum) {
+  return puzzle.map(row => row[colNum]);
 }
 
 function uniq(...args) {
