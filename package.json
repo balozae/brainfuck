@@ -6,8 +6,5 @@
   "license": "MIT",
   "scripts": {
     "sudoku": "node src/sudoku.js"
-  },
-  "dependencies": {
-    "lodash": "^4.17.15"
   }
 }
